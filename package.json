@@ -4,11 +4,13 @@
   "description": "react chatbot for CPF Hackathon",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server"
   },
   "author": "Pichaya Puttekulangkura",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "ibm-watson": "^5.6.0"
