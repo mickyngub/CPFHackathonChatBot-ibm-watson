@@ -12,7 +12,6 @@ import axios from "axios";
 
 if (localStorage.session) {
   delete axios.defaults.headers.common["session_id"];
-
   axios.defaults.headers.common["session_id"] = localStorage.session;
 } else {
   delete axios.defaults.headers.common["session_id"];
@@ -25,8 +24,11 @@ const App = () => {
   });
   return (
     <Provider store={store}>
-      <div className="container">Hey there!</div>;
-      <Chat />
+      <div className="container">
+        {" "}
+        <Chat />
+      </div>
+      ;
     </Provider>
   );
 };

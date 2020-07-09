@@ -23,12 +23,11 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
   return (
     <div className="chat">
       <div className="historyContainer">
-        <h1>Chatbot is here</h1>
+        <h1>CPF Chatbot</h1>
         {chat.length === 0
           ? ""
           : chat.map((msg) => <div className={msg.type}>{msg.message}</div>)}
         <div ref={endOfMessages}></div>
-        <div>Message here</div>
       </div>
       <input
         value={message}
