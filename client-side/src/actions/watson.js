@@ -25,3 +25,18 @@ export const createSession = () => async (dispatch) => {
     dispatch({ type: SESSION_FAIL });
   }
 };
+
+export const sendMessage = (message) => async (dispatch) => {
+  try {
+    const body = { input: message };
+    const res = await axios.post("api/watson/message", body);
+    console.log(res);
+
+    dispatch({
+      type: MESSAGE_SUCCESS,
+      payload: res.data.output.generic[0].text,
+    });
+  } catch (err) {
+    dispatch({ type: MESSAGE_FAIL });
+  }
+};
