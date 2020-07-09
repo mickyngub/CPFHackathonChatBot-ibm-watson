@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
-
+import Card from "@material-ui/core/Card";
 import { userMessage, sendMessage } from "../../actions/watson";
+import Typography from "@material-ui/core/Typography";
 
 const Chat = ({ chat, userMessage, sendMessage }) => {
   const [message, setMessage] = useState("");
@@ -23,7 +24,9 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
   return (
     <div className="chat">
       <div className="historyContainer">
-        <h1>CPF Chatbot</h1>
+        <Card>
+          <Typography>CPF Chatbot</Typography>
+        </Card>
         {chat.length === 0
           ? ""
           : chat.map((msg) => <div className={msg.type}>{msg.message}</div>)}
