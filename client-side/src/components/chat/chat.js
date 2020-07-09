@@ -16,6 +16,9 @@ const Chat = ({ chat, userMessage }) => {
   return (
     <div className="chat">
       <h1>Chatbot is here</h1>
+      {chat.length === 0
+        ? ""
+        : chat.map((msg) => <div className={msg.type}>{msg.message}</div>)}
       <div>Message here</div>
       <input
         value={message}
