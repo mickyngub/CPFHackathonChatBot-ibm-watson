@@ -7,9 +7,9 @@ require("dotenv").config();
 // 1.1 Allow parsing on request bodies
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("<h1>Front Page!</h1>");
-});
+// app.get("/", (req, res) => {
+//   res.send("<h1>Front Page!</h1>");
+// });
 // 2. Import routes for api
 const watsonRoutes = require("./routes/api/watson");
 // 2.1 Direct requests to /api/watson to Watson Routes
