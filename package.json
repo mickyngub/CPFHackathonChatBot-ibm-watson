@@ -11,7 +11,7 @@
     "server": "nodemon server",
     "client-side": "npm start --prefix client-side",
     "dev": "concurrently \"npm run server\" \"npm run client-side\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix --client-side && npm run build --prefix --client-side"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client-side && npm run build --prefix client-side"
   },
   "author": "Pichaya Puttekulangkura",
   "license": "ISC",
